@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation_mg=self.webpackChunkdocumentation_mg||[]).push([[7570],{8349:t=>{t.exports=JSON.parse('{"label":"ruby","permalink":"/documentation-mg/blog/tags/ruby","allTagsPath":"/documentation-mg/blog/tags","count":1}')}}]);

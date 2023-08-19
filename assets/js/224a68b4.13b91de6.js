@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation_mg=self.webpackChunkdocumentation_mg||[]).push([[3277],{8927:t=>{t.exports=JSON.parse('{"label":"phyton","permalink":"/documentation-mg/blog/tags/phyton","allTagsPath":"/documentation-mg/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation_mg=self.webpackChunkdocumentation_mg||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Frontend y Backend","permalink":"/documentation-mg/blog/Frontend y Backend"},{"title":"Bienvenidos","permalink":"/documentation-mg/blog/Bienvenidos"}]}')}}]);

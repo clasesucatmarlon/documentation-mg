@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation_mg=self.webpackChunkdocumentation_mg||[]).push([[6347],{6695:t=>{t.exports=JSON.parse('{"label":"php","permalink":"/documentation-mg/blog/tags/php","allTagsPath":"/documentation-mg/blog/tags","count":1}')}}]);
