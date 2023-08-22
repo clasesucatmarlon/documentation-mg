@@ -1,250 +1,43 @@
-# Configurar proyecto Java en IntelliJ IDEA
+# Configurar proyecto en IntelliJ IDEA
 
-## Arrancando proyecto
+## Pasos:
 
-1. Crear proyecto en carpeta deseada (frontend):
+1. Ir a **"File / Settings / Builds, Execution, Deployment / Compiler"**
 
-```bash
-npm create/init vite@latest <nombre del proyecto> 
-```
+2. Activar la casilla **"Build project autotically"**
 
-2. Entrar al proyecto e iniciar la instalación de dependencias que vienen por default:
+	![](./images/buildProjectAutomatically.png)
 
-```bash
-cd frontend
-npm install
-```
+3. Ir a **"File / Settings / Advanced Settings"**
 
-3. Ejecutar el proyecto:
+4. En la sección **"Compiler"**, activar la opción **"Allow auto-make to start even if developed application is currently running"**
 
-```bash
-npm run dev
-```
+	![](./images/advancedSettings.png)
 
-4. Eliminar los archivos innecesarios y crear estructura de archivos.
+5.	Hacer clic en el botón **"Apply"** y luego en el **"Ok"** para confirmar los cambios. 
 
+6. Crear la Base de datos
 
-5. Cambiar rama a main:
+7. Crear la configuración de la Base de Datos.  Abrir el archivo **"aplication.properties"** que se encuentra en la carpeta **"resorces"** del proyecto y copiar lo siguiente:
 
-```bash
-git config --global init.defaultBranch <name>
-```
+	```
+	spring.datasource.url=jdbc:mysql://localhost:3306/apirest?useSSL=false&serverTimezone=UTC
+	spring.datasource.username=root
+	spring.datasource.password=Marlon12345*
 
-6. Renombrar rama:
+	spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+	spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 
-```bash
-git branch -m <name>
-```
+	spring.jpa.show-sql=true
+	spring.jpa.hibernate.ddl-auto=update
+	logging.level.org.hibernate.SQL=debug
 
-## Instalar dependencias
+	server.port=8081
+	```
 
-### Bootstrap.
+8. Ir a **""File / Settings / Builds, Execution, Deployment / Compiler / Annotation Processor"** y activar la casilla **"Enable annotation processing"**
 
-[https://react-bootstrap.github.io/docs/getting-started/introduction](https://react-bootstrap.github.io/docs/getting-started/introduction)
+	![](./images/annotationProcessors.png)
 
 
-```bash
-npm install react-bootstrap bootstrap
-```
 
-Agregar en el archivo principal de css (index.css) lo siguiente:
-
-```bash
-@import "bootstrap/dist/css/bootstrap.css";
-```
-
-### Axios.
-
-```bash
-npm install axios
-```
-
-Ejemplo para testear axios:
-
-```bash
-// Importar Axios
-import axios from 'axios';
-
-// URL de la API de ejemplo
-const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
-
-// Hacer una solicitud GET a la API
-axios.get(apiUrl)
-  .then(response => {
-    console.log('Respuesta de la API:', response.data);
-  })
-  .catch(error => {
-    console.error('Error al obtener datos:', error);
-  });
-```
-
-### Iconos de Bootstrap.
-
-[https://react-icons.github.io/react-icons](https://react-icons.github.io/react-icons)
-
-```bash
-npm install react-icons --save
-```
-
-ejemplo:
-
-```bash
-import { FaBeer } from 'react-icons/fa';
-
-// usarlo
-<h3> Test <FaBeer />? </h3>
-```
-
-### Prettier.
-
-```bash
-npm i -D prettier
-```
-
-Crear archivo en root: **.prettierrc** y copiar este objeto:
-
-
-```bash
-{
-	"useTabs": true,
-	"semi": true,
-	"singleQuote": true,
-	"jsxSingleQuote": true
-}
-```
-
-### Eslint-config-prettier:
-
-```bash
-npm i -D eslint-config-prettier
-```
-
-Copiar **eslint-config-prettier** en extends dentro de **.eslintrc (.eslintrc.cjs) 
-
-- Instalar: **npm i -D eslint-config-prettier**
-- Copiar **eslint-config-prettier** en extends dentro de **.eslintrc.cjs**
-
-```bash
-module.exports = {
-	root: true,
-	env: { browser: true, es2020: true },
-	extends: [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:react/jsx-runtime',
-		'plugin:react-hooks/recommended',
-		'eslint-config-prettier', // ------> De esta manera
-	],
-	ignorePatterns: ['dist', '.eslintrc.cjs'],
-	parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-	settings: { react: { version: '18.2' } },
-	plugins: ['react-refresh'],
-	rules: {
-		'react-refresh/only-export-components': [
-			'warn',
-			{ allowConstantExport: true },
-		],
-		'react/react-in-jsx-scope': 'off',
-		'no-console': 'warn',
-		'no-unused-vars': 'error',
-	},
-};
-```
-
-- Crear un archivo llamado: **.prettierignore** y agregar:
-
-```bash
-dist
-package-lock.json
-```
-
-- Crear el archivo **.eslintignore** y agregar:
-
-```bash
-dist
-```
-
-- Agregar estos scripts en el **package.json**:
-
-```bash
-"format": "prettier --write .",
-"lint": "eslint --fix . --ext .js,.jsx --report-unused-disable-directives --max-warnings 0",
-```
-
-- Copiar en reglas de eslint:
-
-```bash
-'react/react-in-jsx-scope': 'off',
-'no-console': 'warn',
-'no-unused-vars': 'error',
-```
-
-El archivo **.eslintrc (.eslintrc.cjs)** debe quedar asi:
-
-```bash
-module.exports = {
-	root: true,
-	env: { browser: true, es2020: true },
-	extends: [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:react/jsx-runtime',
-		'plugin:react-hooks/recommended',
-		'eslint-config-prettier',
-	],
-	ignorePatterns: ['dist', '.eslintrc.cjs'],
-	parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-	settings: { react: { version: '18.2' } },
-	plugins: ['react-refresh'],
-	rules: {
-		'react-refresh/only-export-components': [
-			'warn',
-			{ allowConstantExport: true },
-		],
-		'react/react-in-jsx-scope': 'off',
-		'no-console': 'warn',
-		'no-unused-vars': 'error',
-	},
-};
-```
-
-### Husky:
-
-[https://www.youtube.com/watch?v=sKT4YvXc1SY](https://www.youtube.com/watch?v=sKT4YvXc1SY) (min 15:13)
-
-[https://www.youtube.com/watch?v=sKT4YvXc1SY](https://www.youtube.com/watch?v=sKT4YvXc1SY)
-
-- Ejecutar:
-
-```bash
-npx husky-init && npm install
-```
-
-- En el archivo **pre-comit** que se ceó en la carpeta **.husky** agregar los script a ejecutar antes de que se haga el commit:
-
-```bash
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-npm run format
-npm run lint
-```
-
-## Agregar puerto para docker:
-```jsx
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-// https://vitejs.dev/config/
-export default defineConfig({
-	plugins: [react()],
-	server: {
-		watch: {
-		  usePolling: true,
-		},
-		host: true, // needed for the Docker Container port mapping to work
-		strictPort: true,
-		port: 5173, // you can replace this port with any port
-	  }
-});
-```
