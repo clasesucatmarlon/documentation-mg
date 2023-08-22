@@ -1,17 +1,6 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+marlon:
+  name: Marlon A. García M.
+  title: Web Developer
+  url: https://github.com/clasesucatmarlon
+  image_url: https://user-images.githubusercontent.com/60376045/261731823-4cf3d374-f813-4058-af80-8b4d44501f8e.png
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png

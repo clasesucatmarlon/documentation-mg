@@ -10,16 +10,15 @@ const config = {
   tagline: 'Marlon García',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
 
+  // Set the production url of your site here
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'magmCODE', // Usually your GitHub org/user name.
-  projectName: 'Documentation', // Usually your repo name.
+  url: 'https://clasesucatmarlon.github.io',
+  baseUrl: '/documentation-mg',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+  organizationName: 'clasesucatmarlon', // Usually your GitHub org/user name.
+  projectName: 'documentation-mg', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -97,7 +96,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Comunidad',
             items: [
 
               {
@@ -115,7 +114,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Más',
             items: [
               {
                 label: 'Blog',
@@ -123,12 +122,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/clasesucatmarlon',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} magmCODE.`,
       },
       prism: {
         theme: lightCodeTheme,
