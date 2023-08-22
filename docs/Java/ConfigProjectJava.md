@@ -18,7 +18,7 @@
 
 6. Crear la Base de datos
 
-7. Crear la configuración de la Base de Datos.  Abrir el archivo **"aplication.properties"** que se encuentra en la carpeta **"resorces"** del proyecto y copiar lo siguiente:
+7. Crear la configuración de la Base de Datos.  Abrir el archivo **"aplication.properties"** que se encuentra en la carpeta **"resources"** del proyecto y copiar lo siguiente:
 
 	```
 	spring.datasource.url=jdbc:mysql://localhost:3306/apirest?useSSL=false&serverTimezone=UTC
@@ -35,7 +35,7 @@
 	server.port=8081
 	```
 
-8. Ir a **""File / Settings / Builds, Execution, Deployment / Compiler / Annotation Processor"** y activar la casilla **"Enable annotation processing"**
+8. Ir a **"File / Settings / Builds, Execution, Deployment / Compiler / Annotation Processor"** y activar la casilla **"Enable annotation processing"**
 
 	![](./images/annotationProcessors.png)
 
