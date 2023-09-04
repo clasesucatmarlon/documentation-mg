@@ -4,37 +4,37 @@
 
 1. Crear proyecto en carpeta deseada (frontend):
 
-```bash
-npm create/init vite@latest <nombre del proyecto> 
-```
+	```bash
+	npm create/init vite@latest <nombre del proyecto> 
+	```
 
 2. Entrar al proyecto e iniciar la instalación de dependencias que vienen por default:
 
-```bash
-cd frontend
-npm install
-```
+	```bash title="$ >"
+	cd frontend
+	npm install
+	```
 
 3. Ejecutar el proyecto:
 
-```bash
-npm run dev
-```
+	```bash
+	npm run dev
+	```
 
 4. Eliminar los archivos innecesarios y crear estructura de archivos.
 
 
 5. Cambiar rama a main:
 
-```bash
-git config --global init.defaultBranch <name>
-```
+	```bash
+	git config --global init.defaultBranch <name>
+	```
 
 6. Renombrar rama:
 
-```bash
-git branch -m <name>
-```
+	```bash
+	git branch -m <name>
+	```
 
 ## Instalar dependencias
 
@@ -61,7 +61,7 @@ npm install axios
 
 Ejemplo para testear axios:
 
-```bash
+```
 // Importar Axios
 import axios from 'axios';
 
@@ -70,12 +70,12 @@ const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
 // Hacer una solicitud GET a la API
 axios.get(apiUrl)
-  .then(response => {
-    console.log('Respuesta de la API:', response.data);
-  })
-  .catch(error => {
-    console.error('Error al obtener datos:', error);
-  });
+.then(response => {
+	console.log('Respuesta de la API:', response.data);
+})
+.catch(error => {
+	console.error('Error al obtener datos:', error);
+});
 ```
 
 ### Iconos de Bootstrap.
@@ -124,7 +124,7 @@ Copiar **eslint-config-prettier** en extends dentro de **.eslintrc (.eslintrc.cj
 - Instalar: **npm i -D eslint-config-prettier**
 - Copiar **eslint-config-prettier** en extends dentro de **.eslintrc.cjs**
 
-```bash
+```js {9}
 module.exports = {
 	root: true,
 	env: { browser: true, es2020: true },
@@ -135,19 +135,8 @@ module.exports = {
 		'plugin:react-hooks/recommended',
 		'eslint-config-prettier', // ------> De esta manera
 	],
-	ignorePatterns: ['dist', '.eslintrc.cjs'],
-	parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-	settings: { react: { version: '18.2' } },
-	plugins: ['react-refresh'],
-	rules: {
-		'react-refresh/only-export-components': [
-			'warn',
-			{ allowConstantExport: true },
-		],
-		'react/react-in-jsx-scope': 'off',
-		'no-console': 'warn',
-		'no-unused-vars': 'error',
-	},
+	...
+	...
 };
 ```
 
@@ -181,7 +170,7 @@ dist
 
 El archivo **.eslintrc (.eslintrc.cjs)** debe quedar asi:
 
-```bash
+```jsx js {9,20-22} showLineNumbers
 module.exports = {
 	root: true,
 	env: { browser: true, es2020: true },

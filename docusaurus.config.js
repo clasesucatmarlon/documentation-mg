@@ -130,7 +130,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} magmCODE.`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
