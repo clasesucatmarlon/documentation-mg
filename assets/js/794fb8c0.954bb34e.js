@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocumentation_mg=self.webpackChunkdocumentation_mg||[]).push([[4373],{9424:e=>{e.exports=JSON.parse('{"title":"ReactJS","description":"Trabajando con ReacJS.","slug":"/category/reactjs","permalink":"/documentation-mg/docs/category/reactjs","navigation":{"next":{"title":"Componentes","permalink":"/documentation-mg/docs/ReactJS/Componentes"}}}')}}]);
